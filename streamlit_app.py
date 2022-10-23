@@ -43,10 +43,7 @@ st.write(f'''
     <a href="https://twitter.com/roeangrasa_mu">
        Twitter
     </a>
-    ''',
-    unsafe_allow_html=True
-)
-st.write(f'''
+    dan
     <a href="https://instagram.com/roeangrasa_mu">
        Instagram
     </a>
