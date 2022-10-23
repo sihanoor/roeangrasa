@@ -38,8 +38,21 @@ class Tweet(object):
     def component(self):
         return components.html(self.text,height=800)
    
-st.markdown('Kamu bisa mengikuti #tantanganbahagia yang akan dibagikan setiap hari. Kamu bisa alirkan apa yang kamu rasakan setelah menyelesaikan #tantanganbahagia hari ini, tuliskan di halaman berbagi rasa ya!')
-t = Tweet("https://twitter.com/roeangrasa_mu").component()     
+st.markdown('Kamu bisa mengikuti #tantanganbahagia yang akan dibagikan setiap hari. Kamu bisa alirkan apa yang kamu rasakan setelah menyelesaikan #tantanganbahagia hari ini dengan menulis komentar di akun sosial media Roeang Rasa :')
+st.write(f'''
+    <a href="https://twitter.com/roeangrasa_mu">
+       Twitter
+    </a>
+    ''',
+    unsafe_allow_html=True
+)
+st.write(f'''
+    <a href="https://instagram.com/roeangrasa_mu">
+       Twitter
+    </a>
+    ''',
+    unsafe_allow_html=True
+)t = Tweet("https://twitter.com/roeangrasa_mu").component()     
 
             
 
