@@ -2,8 +2,6 @@
 import os
 
 import streamlit as st
-from loguru import logger
-
 import requests
 import streamlit.components.v1 as components
 
