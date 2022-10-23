@@ -38,6 +38,7 @@ class Tweet(object):
    
 st.markdown('Kamu bisa mengikuti #tantanganbahagia yang akan dibagikan setiap hari. Kamu bisa alirkan apa yang kamu rasakan setelah menyelesaikan #tantanganbahagia hari ini, tuliskan di halaman berbagi rasa ya!')
 t = Tweet("https://twitter.com/roeangrasa_mu").component()     
+
             
 
     
