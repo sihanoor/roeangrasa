@@ -13,6 +13,9 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+st.markdown("💬 Beranda Roeang Rasa")
+st.sidebar.markdown("# 💬 Beranda")
+
 st.title("💬 Roeang Rasa")
 #twitter
 class Tweet(object):
