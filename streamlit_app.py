@@ -48,7 +48,7 @@ st.write(f'''
 )
 st.write(f'''
     <a href="https://instagram.com/roeangrasa_mu">
-       Twitter
+       Instagram
     </a>
     ''',
     unsafe_allow_html=True
