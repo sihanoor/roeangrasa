@@ -1,0 +1,11 @@
+import streamlit as st
+import time
+
+st.markdown("#💻Sosial Media")
+st.sidebar.markdown("# 💻Sosial Media")
+
+'Ikuti Sosial media kami :'
+'Twitter @roeangrasa_mu'
+'Instagram @roeangrasa_mu'
+
+st.snow()
