@@ -1,6 +1,13 @@
 import streamlit as st
 import time
 
+st.set_page_config(
+    page_title="Roeang Rasa",
+    page_icon="💬",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
+
 st.markdown("#🎵 Gallery Lagu")
 st.sidebar.markdown("# 🎵 Gallery Lagu")
 
