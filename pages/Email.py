@@ -1,5 +1,5 @@
 import streamlit as st
 
-title = c2.text_input('Comments',key=blob+"title")
-if st.button('Save Me', key=blob+"save"):
+title = st.text_input('Comments', "title")
+if st.button('Save Me', "save"):
     st.write(title)
