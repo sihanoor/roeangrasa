@@ -15,6 +15,10 @@ st.set_page_config(
 
 st.markdown("💬 Beranda Roeang Rasa")
 st.sidebar.markdown("# 💬 Beranda")
+st.markdown("#💻Sosial Media")
+st.sidebar.markdown("Ikuti Sosial media kami :")
+st.sidebar.markdown("Twitter @roeangrasa_mu")
+st.sidebar.markdown("Instagram @roeangrasa_mu")
 
 st.title("💬 Roeang Rasa")
 #twitter
