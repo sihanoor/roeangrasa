@@ -1,38 +1,46 @@
-from collections import namedtuple
-import altair as alt
-import math
-import pandas as pd
+"""Main module for the streamlit app"""
+import os
+
 import streamlit as st
+from loguru import logger
 
-"""
-# Welcome to Streamlit!
+import requests
+import streamlit.components.v1 as components
 
-Edit `/streamlit_app.py` to customize this app to your heart's desire :heart:
+from utils.sidebar import sidebar_caption
 
-If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
-forums](https://discuss.streamlit.io).
+# Config the whole app
+st.set_page_config(
+    page_title="Roeang Rasa",
+    page_icon="💬",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
 
-In the meantime, below is an example of what you can do with just a few lines of code:
-"""
+st.title("💬 Roeang Rasa")
+#twitter
+class Tweet(object):
+    def __init__(self, s, embed_str=False):
+        if not embed_str:
+            # Use Twitter's oEmbed API
+            # https://dev.twitter.com/web/embedded-tweets
+            api = "https://publish.twitter.com/oembed?url={}".format(s)
+            response = requests.get(api)
+            self.text = response.json()["html"]
+        else:
+            self.text = s
+
+    def _repr_html_(self):
+        return self.text
+
+    def component(self):
+        return components.html(self.text,height=800)
+   
+st.markdown('Kamu bisa mengikuti #tantanganbahagia yang akan dibagikan setiap hari. Kamu bisa alirkan apa yang kamu rasakan setelah menyelesaikan #tantanganbahagia hari ini, tuliskan di halaman berbagi rasa ya!')
+t = Tweet("https://twitter.com/roeangrasa_mu").component()     
+            
+
+    
 
 
-with st.echo(code_location='below'):
-    total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
-    num_turns = st.slider("Number of turns in spiral", 1, 100, 9)
-
-    Point = namedtuple('Point', 'x y')
-    data = []
-
-    points_per_turn = total_points / num_turns
-
-    for curr_point_num in range(total_points):
-        curr_turn, i = divmod(curr_point_num, points_per_turn)
-        angle = (curr_turn + 1) * 2 * math.pi * i / points_per_turn
-        radius = curr_point_num / total_points
-        x = radius * math.cos(angle)
-        y = radius * math.sin(angle)
-        data.append(Point(x, y))
-
-    st.altair_chart(alt.Chart(pd.DataFrame(data), height=500, width=500)
-        .mark_circle(color='#0068c9', opacity=0.5)
-        .encode(x='x:Q', y='y:Q'))
+    
