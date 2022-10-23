@@ -5,8 +5,6 @@ import streamlit as st
 import requests
 import streamlit.components.v1 as components
 
-from utils.sidebar import sidebar_caption
-
 # Config the whole app
 st.set_page_config(
     page_title="Roeang Rasa",
